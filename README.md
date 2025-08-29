@@ -6,13 +6,25 @@
 
 ## 📋 **프로젝트 개요**
 
-Memory Forest는 AI 기술을 활용하여 치매 환자와 가족에게 실질적인 도움을 제공하는 혁신적인 서비스입니다. 개인화된 인지 훈련을 통해 환자의 삶의 질을 향상시키고, 가족의 돌봄 부담을 경감하는 것을 목표로 합니다.
+### 🌟 **서비스 소개**
 
-### **🎯 주요 목표**
-- 치매 노인의 인지 기능 유지 및 개선
-- 가족 중심의 돌봄 지원 시스템 구축
-- AI 기반 개인화 훈련을 통한 치료 효과 극대화
-- 사회적 돌봄 비용 절감 기여
+"소중한 추억을 활용한 개인 맞춤형 인지 훈련으로 치매를 예방하는 디지털 헬스케어 서비스"
+
+### 📈 **배경 및 필요성**
+
+치매 환자 증가: 경도인지장애 환자 30만명 돌파
+조기 발견의 중요성: 인지활동의 증가가 인지보존을 저극하거나 증가시킬 수 있으며, 인지활동의 낮은 수준에 비해 높은 수준인 사람에게 경도인지장애나 알츠하이머 치매진단의 위험성이 현저하게 감소
+개인화된 케어: 노인성 질환의 치매에 대한 관심이 어느 때보다 상승
+
+### 🎯 **서비스 목표*
+
+기록자 연령대 고려한 맞춤형 UI/UX 페이지 설계
+가족 간 추억을 활용한 개인 맞춤형 AI 인지 게임 구현
+음성 일기 작성 및 OPEN AI 기반 감정 분석 차트 제공
+
+
+
+
 
 ### **🚀 핵심 기능**
 - **AI 기반 콘텐츠 분석**: 이미지 및 텍스트 분석을 통한 개인화된 콘텐츠 생성
@@ -25,19 +37,12 @@ Memory Forest는 AI 기술을 활용하여 치매 환자와 가족에게 실질�
 ## 🏗️ **시스템 아키텍처**
 
 ### **기술 스택**
-- **Backend**: Spring Boot 3.x, Java 17, MySQL 8.x
-- **Frontend**: React 18, TypeScript, Vite
-- **AI Service**: FastAPI, Python 3.10, Word2Vec, KoNLPy
-- **Infrastructure**: Docker, Docker Compose, Nginx
-- **CI/CD**: GitHub Actions
+<img width="2264" height="935" alt="image" src="https://github.com/user-attachments/assets/a6fe9668-a846-4957-8f9c-67538a8f1c7f" />
+
 
 ### **아키텍처 구조**
-```
-[React Frontend] ↔ [Spring Boot API Gateway] ↔ [Microservices]
-                                                      ↓
-                   [MySQL Database] ↔ [Redis Cache] ↔ [AI Engine]
-                                                      ↓
-                              [File Storage (AWS S3/Local)]
+<img width="1901" height="1075" alt="image" src="https://github.com/user-attachments/assets/46d24a65-2cc8-48c3-a0b6-a424234b808e" />
+
 ```
 
 ---
@@ -78,7 +83,7 @@ Memory Forest는 AI 기술을 활용하여 치매 환자와 가족에게 실질�
 ### **개발 환경 구축**
 ```bash
 # 1. 저장소 클론
-git clone https://github.com/your-username/memory-forest.git
+git clone https://github.com/Potatoeunbi/memory-forest.git
 cd memory-forest
 
 # 2. Docker 환경 실행
