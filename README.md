@@ -22,8 +22,16 @@
 - 가족 간 추억을 활용한 개인 맞춤형 AI 인지 게임 구현
 - 음성 일기 작성 및 OPEN AI 기반 감정 분석 차트 제공
 
+<br><br>
+## 📅 개발 일정
 
+**총 개발 기간: 2025년 6월 16일 ~ 8월 21일 (약 9주, 2개월)**
 
+| 기간 | 단계 | 주요 활동 |
+|------|------|-----------|
+| **06.16 - 06.30** | 🎯 프로젝트 기획 및 설계 | 요구사항 분석 및 기획<br>시스템 아키텍처 설계<br>DB 스키마 설계<br>UI/UX 프로토타입 |
+| **07.01 - 08.14** | 🛠️ 핵심 기능 개발 및 AI 모델 구축 | React 프론트엔드 개발<br>Spring Boot 백엔드 API<br>AI 모델 학습 및 FastAPI<br>Docker 환경 구성 |
+| **08.15 - 08.21** | 🧪 통합 테스트 및 배포 준비 | 전체 시스템 통합 테스트<br>AWS 배포 환경 구성<br>성능 최적화<br>최종 검수 및 문서화 |
 
 
 ### **🚀 핵심 기능**
@@ -32,8 +40,11 @@
 - **진행도 추적**: 다차원 성과 분석 및 트렌드 모니터링
 - **가족 공유 시스템**: 환자의 진행 상황을 가족과 공유하여 돌봄 지원
 
+<br>
+
 ---
 
+<br>
 
 ## ✨ 주요 기능
 
@@ -80,16 +91,31 @@
 - **성능**: GPQA 88.4%, MMMU 84.2%
 - **워크플로우**: `음성 일기` → `텍스트 변환` → `GPT-5 감정 분석` → `점수 산출` → `차트 시각화`
 - **출력**: 기쁨, 슬픔, 분노, 두려움 등 다차원 감정 점수
+
+<br>
+
 ---
 
-**🔒 보안 및 인증**
-**인증 시스템**
+<br>
+
+## **🔒 보안 및 인증**
+### **보안 기능**
+- **CSRF 보호**: 크로스 사이트 요청 위조 방지
+- **암호화**: 패스워드 암호화 저장
+- **권한 관리**: 사용자별 접근 권한 제어
+- **보안 헤더**: XSS, 클릭재킹 등 웹 보안 위협 방지
+### **인증 시스템**
 - **JWT 토큰**: Access Token(15분) + Refresh Token(2주)
 - **OAuth2 소셜 로그인**: 네이버, 카카오 연동
 - **Redis 세션 관리**: 토큰 저장 및 관리
-- **Spring Security**: 백엔드 보안 프레임워크
+- **Spring Security**: 인증/인가 및 보안 필터 처리
+
+
+<br>
 
 ---
+
+<br>
 
 ## 🏗️ **시스템 아키텍처**
 
@@ -101,6 +127,94 @@
 <img width="1901" height="1075" alt="image" src="https://github.com/user-attachments/assets/46d24a65-2cc8-48c3-a0b6-a424234b808e" />
 
 
+<br>
+
+---
+
+<br>
+
+
+## 📋 **명세서**
+### **유스케이스 명세서**
+<img width="2241" height="1109" alt="image" src="https://github.com/user-attachments/assets/5111b43b-fed5-4349-b7a0-5827dd251172" />
+
+### **기능 명세서**
+<img width="2391" height="1197" alt="image" src="https://github.com/user-attachments/assets/532eb12e-7a16-4b38-b5cf-3fd1c3f6f74b" />
+
+### **ERD 명세서**
+<img width="2296" height="954" alt="image" src="https://github.com/user-attachments/assets/b1443d7b-ff15-412a-bd7a-f7e0a0ec78f0" />
+
+<br>
+
+---
+
+<br>
+
+## 서비스 영상 및 화면 구성
+### 📹 **화면 구성**
+
+**회원가입**
+
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/898e5c7d-fbef-432a-9b4e-7ca0febe5d1c" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/421056ae-1aff-42e6-a980-591ba6bf89e8" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/a38003e5-b64b-4723-a62d-ffbe32185237" /> |
+|------|------|------|
+
+
+
+**로그인**
+
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/2a7c0f99-cee1-480d-b337-c8cef0fbe2f3" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/ee31dc36-fde0-45d9-b211-b61a5b837249" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/1c7cb20d-1588-4226-9847-38d12474719b" /> |
+|------|------|------|
+
+
+**기록자 추가**
+
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/5b965897-a4e8-45e3-a3a7-abb15f070db6" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/b1348b30-776d-4491-9f7d-916766c8de5a" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/91917ba1-258e-443d-a356-796caebc467c" /> |
+|------|------|------|
+
+
+**게임 추가**
+
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/0edf74dd-180e-4e57-a632-108ff61c3595" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/d0d7e638-3607-410a-89b1-7d7440fb6c41" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/8b7d7c6e-d646-4181-8b9d-ab446dc85158" /> |
+|------|------|------|
+
+**게임 실행**
+
+
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/aa698abd-f88f-48f6-bbe8-871560404ddb" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/4fd6a975-6280-4b84-a5e9-4a8a681ced20" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/a68e4813-459a-4de3-8159-7f2079959186" /> |
+|---|---|---|
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/a846fec1-e4ac-4a26-9570-58b224341d0d" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/40d81613-46d5-454e-ada6-0668a3177cfb" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/f6516c0c-c990-4f17-bbe1-7a2e685afa3c" /> |
+|---|---|---|
+
+
+
+**기록자 일기(음성 일기)**
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/c47e346a-5a5d-469f-a7de-346b3fc99cf1" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/e8e59d9a-33f6-4dda-a9ff-2595c9f8069f" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/60a38f0b-29f4-419a-806f-f3de191966cf" /> |
+|------|------|------|
+
+
+**알림/차트 확인**
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/901265ae-922b-4744-9d81-1724f89a326e" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/604e6519-9ef7-49f6-97f6-17eb7c89f4fa" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/1863c566-0f9e-40f5-8c74-00fcd5341010" /> |
+|------|------|------|
+
+
+
+**게임/기록 결과 PDF 저장**
+|<img width="589" height="755" alt="image" src="https://github.com/user-attachments/assets/f68f158f-66e0-4058-bd85-5ff71ea00d3b" />| <img width="588" height="753" alt="image" src="https://github.com/user-attachments/assets/3dc54d8a-41cd-4f09-9830-6411256841f1" /> | <img width="582" height="754" alt="image" src="https://github.com/user-attachments/assets/c1e30462-cadb-4b93-a978-db4b3ca73459" /> |
+|------|------|------|
+
+<br>
+
+---
+
+<br>
+
 
 
 ## 🚀 **빠른 시작**
@@ -110,7 +224,6 @@
 - Node.js 18+
 - Python 3.10+
 - Docker & Docker Compose
-- MySQL 8.x
 
 ### **개발 환경 구축**
 ```bash
@@ -123,7 +236,7 @@ cd ./docker
 docker-compose build
 dockeer-compose up -d
 ```
----
+<br><br>
 
 
 
@@ -144,32 +257,7 @@ dockeer-compose up -d
 - 소셜 로그인 UI, 모바일 최적화
 - 음성 텍스트 변환
 
-
----
-
-## 🧪 **테스트**
-
-### **테스트 실행**
-```bash
-# 백엔드 테스트
-cd backend/SpringBoot
-./gradlew test
-
-# 프론트엔드 테스트
-cd frontend
-npm test
-
-# AI 서비스 테스트
-cd ai
-python -m pytest
-```
-
-### **테스트 커버리지**
-- **백엔드**: 80% 이상
-- **프론트엔드**: 70% 이상
-- **AI 서비스**: 75% 이상
-
----
+<br><br>
 
 
 ## 🤝 **기여하기**
@@ -194,9 +282,6 @@ python -m pytest
 ### **연락처**
 - **이메일**: leb6336@gmail.com
 - **GitHub**: [https://github.com/Potatoeunbi/memory-forest](https://github.com/Potatoeunbi/memory-forest)
-
----
-
 
 ---
 
