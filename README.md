@@ -1,18 +1,38 @@
 # 🌳 **Memory Forest - AI 기반 치매 케어 인지 훈련 플랫폼**
 
-> **AI 기술을 활용하여 치매 환자와 가족에게 실질적인 도움을 제공하는 혁신적인 서비스**
+> **AI 기술을 활용하여 치매 환자와 가족에게 실질적인 도움을 제공하는 혁신적인 서비스**  
 
----
+<br><br>
 
 ## 📋 **프로젝트 개요**
 
-Memory Forest는 AI 기술을 활용하여 치매 환자와 가족에게 실질적인 도움을 제공하는 혁신적인 서비스입니다. 개인화된 인지 훈련을 통해 환자의 삶의 질을 향상시키고, 가족의 돌봄 부담을 경감하는 것을 목표로 합니다.
+### 🌟 **서비스 소개**
 
-### **🎯 주요 목표**
-- 치매 노인의 인지 기능 유지 및 개선
-- 가족 중심의 돌봄 지원 시스템 구축
-- AI 기반 개인화 훈련을 통한 치료 효과 극대화
-- 사회적 돌봄 비용 절감 기여
+- "소중한 추억을 활용한 개인 맞춤형 인지 훈련으로 치매를 예방하는 디지털 헬스케어 서비스"
+
+### 📈 **배경 및 필요성**
+
+- 치매 환자 증가: 경도인지장애 환자 30만명 돌파
+- 조기 발견의 중요성: 인지활동의 증가가 인지보존을 저극하거나 증가시킬 수 있으며, 인지활동의 낮은 수준에 비해 높은 수준인 사람에게 경도인지장애나 알츠하이머 치매진단의 위험성이 현저하게 감소
+- 개인화된 케어: 노인성 질환의 치매에 대한 관심이 어느 때보다 상승
+
+### 🎯 **서비스 목표**
+
+- 기록자 연령대 고려한 맞춤형 UI/UX 페이지 설계
+- 가족 간 추억을 활용한 개인 맞춤형 AI 인지 게임 구현
+- 음성 일기 작성 및 OPEN AI 기반 감정 분석 차트 제공
+
+<br><br>
+## 📅 개발 일정
+
+**총 개발 기간: 2025년 6월 16일 ~ 8월 21일 (약 9주, 2개월)**
+
+| 기간 | 단계 | 주요 활동 |
+|------|------|-----------|
+| **06.16 - 06.30** | 🎯 프로젝트 기획 및 설계 | 요구사항 분석 및 기획<br>시스템 아키텍처 설계<br>DB 스키마 설계<br>UI/UX 프로토타입 |
+| **07.01 - 08.14** | 🛠️ 핵심 기능 개발 및 AI 모델 구축 | React 프론트엔드 개발<br>Spring Boot 백엔드 API<br>AI 모델 학습 및 FastAPI<br>Docker 환경 구성 |
+| **08.15 - 08.21** | 🧪 통합 테스트 및 배포 준비 | 전체 시스템 통합 테스트<br>AWS 배포 환경 구성<br>성능 최적화<br>최종 검수 및 문서화 |
+
 
 ### **🚀 핵심 기능**
 - **AI 기반 콘텐츠 분석**: 이미지 및 텍스트 분석을 통한 개인화된 콘텐츠 생성
@@ -20,51 +40,182 @@ Memory Forest는 AI 기술을 활용하여 치매 환자와 가족에게 실질�
 - **진행도 추적**: 다차원 성과 분석 및 트렌드 모니터링
 - **가족 공유 시스템**: 환자의 진행 상황을 가족과 공유하여 돌봄 지원
 
+<br>
+
 ---
+
+<br>
+
+## ✨ 주요 기능
+
+### 🎮 **게임 기능 (AI 연동)**
+- **게임 만들기**: 개인 사진과 정보를 업로드하여 맞춤형 게임 생성
+- **AI 오답 생성**: 동행자가 입력한 정답을 기반으로 Word2Vec + Skip-gram 모델이 자동으로 유사한 오답 생성
+- **난이도별 점수**: AI가 오답의 유사도를 분석하여 차등 점수 자동 부여
+- **회원가입**: 간편한 소셜 로그인 (네이버, 카카오) 지원
+- **기록자 추가**: 가족 구성원 정보 등록 및 관리
+- **게임 실행**: 실시간 게임 진행 및 AI 기반 결과 분석
+
+### 🎙️ **기록 기능 (AI 연동)**
+- **음성 일기**: 매일 음성으로 일기 작성 (1일 1회 제한)
+- **음성 인식**: Web Speech API를 통한 정확한 음성-텍스트 변환
+- **AI 감정 분석**: GPT-5-nano가 일기 내용을 분석하여 감정 상태 점수화
+- **감정 추적**: 다차원 감정 점수 및 시간별 변화 패턴 분석
+
+### 📊 **분석 및 관리**
+- **AI 대시보드**: 게임 성과 및 감정 상태 AI 분석 결과 시각화
+- **PDF 보고서**: AI가 분석한 상세 활동 내역 및 통계 보고서 생성
+- **진행도 추적**: AI 기반 인지 훈련 성과 모니터링
+
+### 🤖 **AI 핵심 기술**
+
+#### 🎯 **게임 생성 AI**
+- **모델**: Word2Vec + Skip-gram
+- **워크플로우**: `동행자 정답 입력` → `AI 유사어 분석` → `오답 자동 생성` → `난이도별 점수 부여`
+- **기능**:
+  - 정답과 유사도가 적절한 오답 3개 자동 생성
+  - 난이도별 게임 자동 생성
+  - 비슷한 오답 방지
+  - 사용자 맞춤형 문제 제공
+  - 유사도에 따른 차등 점수 시스템
+
+**📈 AI 워크플로우**
+**🔧 모델 및 데이터**
+- **최적화**: Optuna를 활용한 하이퍼파라미터 튜닝
+- **학습데이터**: 네이버 블로그 & 뉴스 크롤링 데이터 약 31,000건
+- **형식**: JSON → 토큰화된 텍스트
+- **실시간 처리**: FastAPI를 통한 빠른 AI 응답
+
+#### 🔍 **감정 분석 AI**
+- **모델**: OpenAI GPT-5-nano
+- **성능**: GPQA 88.4%, MMMU 84.2%
+- **워크플로우**: `음성 일기` → `텍스트 변환` → `GPT-5 감정 분석` → `점수 산출` → `차트 시각화`
+- **출력**: 기쁨, 슬픔, 분노, 두려움 등 다차원 감정 점수
+
+<br>
+
+---
+
+<br>
+
+## **🔒 보안 및 인증**
+### **보안 기능**
+- **CSRF 보호**: 크로스 사이트 요청 위조 방지
+- **암호화**: 패스워드 암호화 저장
+- **권한 관리**: 사용자별 접근 권한 제어
+- **보안 헤더**: XSS, 클릭재킹 등 웹 보안 위협 방지
+### **인증 시스템**
+- **JWT 토큰**: Access Token(15분) + Refresh Token(2주)
+- **OAuth2 소셜 로그인**: 네이버, 카카오 연동
+- **Redis 세션 관리**: 토큰 저장 및 관리
+- **Spring Security**: 인증/인가 및 보안 필터 처리
+
+
+<br>
+
+---
+
+<br>
 
 ## 🏗️ **시스템 아키텍처**
 
 ### **기술 스택**
-- **Backend**: Spring Boot 3.x, Java 17, MySQL 8.x
-- **Frontend**: React 18, TypeScript, Vite
-- **AI Service**: FastAPI, Python 3.10, Word2Vec, KoNLPy
-- **Infrastructure**: Docker, Docker Compose, Nginx
-- **CI/CD**: GitHub Actions
+<img width="2264" height="935" alt="image" src="https://github.com/user-attachments/assets/a6fe9668-a846-4957-8f9c-67538a8f1c7f" />
+
 
 ### **아키텍처 구조**
-```
-[React Frontend] ↔ [Spring Boot API Gateway] ↔ [Microservices]
-                                                      ↓
-                   [MySQL Database] ↔ [Redis Cache] ↔ [AI Engine]
-                                                      ↓
-                              [File Storage (AWS S3/Local)]
-```
+<img width="1901" height="1075" alt="image" src="https://github.com/user-attachments/assets/46d24a65-2cc8-48c3-a0b6-a424234b808e" />
+
+
+<br>
 
 ---
 
-## 📚 **프로젝트 문서**
+<br>
 
-### **📋 기획 및 설계 문서**
-- [📄 프로젝트 개요서](docs/01_프로젝트_개요서.md) - 프로젝트 기본 정보 및 개요
-- [📋 요구사항 정의서](docs/02_요구사항_정의서.md) - 기능 및 비기능 요구사항 정의
-- [🗂️ ERD 설계서](docs/03_ERD_설계서.md) - 데이터베이스 설계 및 관계 정의
-- [🔌 API 명세서](docs/04_API_명세서.md) - REST API 엔드포인트 명세
-- [🎨 화면 설계서](docs/05_화면_설계서.md) - UI/UX 설계 및 화면 구성
 
-### **🏗️ 기술 및 개발 문서**
-- [🏛️ 시스템 아키텍처](docs/06_시스템_아키텍처.md) - 전체 시스템 구조 및 설계
-- [📦 배포 가이드](docs/07_배포_가이드.md) - 배포 환경 구축 및 운영 가이드
-- [📅 일정표 및 마일스톤](docs/08_일정표_및_마일스톤.md) - 프로젝트 일정 및 주요 마일스톤
-- [📊 WBS](docs/09_WBS.md) - 작업 분해 구조 및 상세 계획
-- [📝 회의록 템플릿](docs/10_회의록_템플릿.md) - 회의록 작성 표준 템플릿
+## 📋 **명세서**
+### **유스케이스 명세서**
+<img width="2241" height="1109" alt="image" src="https://github.com/user-attachments/assets/5111b43b-fed5-4349-b7a0-5827dd251172" />
 
-### **📖 상세 명세서**
-- [👥 유스케이스 명세서](docs/11_유스케이스_명세서.md) - 사용자 시나리오 및 기능 명세
-- [⚙️ 기능 명세서](docs/12_기능_명세서.md) - 상세 기능 정의 및 구현 가이드
-- [📊 UML 다이어그램](docs/13_UML_다이어그램.md) - 클래스, 시퀀스, 상태 다이어그램
-- [📝 코딩 컨벤션](docs/14_코딩_컨벤션.md) - 개발 언어별 코딩 표준 및 가이드라인
+### **기능 명세서**
+<img width="2391" height="1197" alt="image" src="https://github.com/user-attachments/assets/532eb12e-7a16-4b38-b5cf-3fd1c3f6f74b" />
+
+### **ERD 명세서**
+<img width="2296" height="954" alt="image" src="https://github.com/user-attachments/assets/b1443d7b-ff15-412a-bd7a-f7e0a0ec78f0" />
+
+<br>
 
 ---
+
+<br>
+
+## 서비스 영상 및 화면 구성
+### 📹 **화면 구성**
+
+**회원가입**
+
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/898e5c7d-fbef-432a-9b4e-7ca0febe5d1c" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/421056ae-1aff-42e6-a980-591ba6bf89e8" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/a38003e5-b64b-4723-a62d-ffbe32185237" /> |
+|------|------|------|
+
+
+
+**로그인**
+
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/2a7c0f99-cee1-480d-b337-c8cef0fbe2f3" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/ee31dc36-fde0-45d9-b211-b61a5b837249" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/1c7cb20d-1588-4226-9847-38d12474719b" /> |
+|------|------|------|
+
+
+**기록자 추가**
+
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/5b965897-a4e8-45e3-a3a7-abb15f070db6" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/b1348b30-776d-4491-9f7d-916766c8de5a" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/91917ba1-258e-443d-a356-796caebc467c" /> |
+|------|------|------|
+
+
+**게임 추가**
+
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/0edf74dd-180e-4e57-a632-108ff61c3595" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/d0d7e638-3607-410a-89b1-7d7440fb6c41" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/8b7d7c6e-d646-4181-8b9d-ab446dc85158" /> |
+|------|------|------|
+
+**게임 실행**
+
+
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/aa698abd-f88f-48f6-bbe8-871560404ddb" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/4fd6a975-6280-4b84-a5e9-4a8a681ced20" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/a68e4813-459a-4de3-8159-7f2079959186" /> |
+|---|---|---|
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/a846fec1-e4ac-4a26-9570-58b224341d0d" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/40d81613-46d5-454e-ada6-0668a3177cfb" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/f6516c0c-c990-4f17-bbe1-7a2e685afa3c" /> |
+|---|---|---|
+
+
+
+**기록자 일기(음성 일기)**
+
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/c47e346a-5a5d-469f-a7de-346b3fc99cf1" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/e8e59d9a-33f6-4dda-a9ff-2595c9f8069f" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/60a38f0b-29f4-419a-806f-f3de191966cf" /> |
+|------|------|------|
+
+
+**알림/차트 확인**
+| <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/901265ae-922b-4744-9d81-1724f89a326e" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/604e6519-9ef7-49f6-97f6-17eb7c89f4fa" /> | <img width="451" height="928" alt="image" src="https://github.com/user-attachments/assets/1863c566-0f9e-40f5-8c74-00fcd5341010" /> |
+|------|------|------|
+
+
+
+**게임/기록 결과 PDF 저장**
+|<img width="589" height="755" alt="image" src="https://github.com/user-attachments/assets/f68f158f-66e0-4058-bd85-5ff71ea00d3b" />| <img width="588" height="753" alt="image" src="https://github.com/user-attachments/assets/3dc54d8a-41cd-4f09-9830-6411256841f1" /> | <img width="582" height="754" alt="image" src="https://github.com/user-attachments/assets/c1e30462-cadb-4b93-a978-db4b3ca73459" /> |
+|------|------|------|
+
+<br>
+
+---
+
+<br>
+
+
 
 ## 🚀 **빠른 시작**
 
@@ -73,147 +224,41 @@ Memory Forest는 AI 기술을 활용하여 치매 환자와 가족에게 실질�
 - Node.js 18+
 - Python 3.10+
 - Docker & Docker Compose
-- MySQL 8.x
 
 ### **개발 환경 구축**
 ```bash
 # 1. 저장소 클론
-git clone https://github.com/your-username/memory-forest.git
+git clone https://github.com/Potatoeunbi/memory-forest.git
 cd memory-forest
 
 # 2. Docker 환경 실행
-docker-compose up -d
-
-# 3. 백엔드 실행
-cd backend/SpringBoot
-./gradlew bootRun
-
-# 4. 프론트엔드 실행
-cd frontend
-npm install
-npm run dev
-
-# 5. AI 서비스 실행
-cd ai
-pip install -r requirements.txt
-python main.py
+cd ./docker
+docker-compose build
+dockeer-compose up -d
 ```
+<br><br>
 
-### **환경 변수 설정**
-```bash
-# .env 파일 생성
-cp .env.example .env
 
-# 필요한 환경 변수 설정
-DB_HOST=localhost
-DB_PORT=3306
-DB_NAME=memory_forest
-DB_USER=root
-DB_PASSWORD=password
 
-AI_SERVICE_URL=http://localhost:8000
-FRONTEND_URL=http://localhost:3000
-```
 
----
+## 📈 **프로젝트 성과**
+### ✅ **완성도**
 
-## 🎮 **주요 기능**
+- **인프라 구축**: 100%
+- **AI 서비스**: 100%
+- **백엔드 시스템**: 100%
+- **프론트엔드**: 100%
+- **최종 검증**: 100%
 
-### **1. AI 기반 콘텐츠 분석**
-- **이미지 분석**: 객체 인식 및 태그 생성
-- **텍스트 분석**: 키워드 추출 및 감정 분석
-- **Word2Vec 모델**: 의미적 유사도 계산 및 연관어 생성
+### ✅ **완료된 핵심 기능들**
+- 사용자 대시보드, 게임 플레이 UI
+- 음성 녹음 시스템, 실시간 차트
+- 방문형 디자인, PDF 보고서 생성
+- 소셜 로그인 UI, 모바일 최적화
+- 음성 텍스트 변환
 
-### **2. 인지 훈련 게임**
-- **이미지-명사 매칭**: 4지선다 게임을 통한 인지 훈련
-- **적응형 난이도**: 사용자 성과에 따른 동적 난이도 조절
-- **즉시 피드백**: 정답 여부 및 점수 즉시 제공
+<br><br>
 
-### **3. 진행도 추적 시스템**
-- **다차원 분석**: 정확도, 반응시간, 일관성 지표 추적
-- **트렌드 분석**: 장기 변화 추이 및 개선 방향 제시
-- **리포트 생성**: 일간/주간/월간 성과 리포트
-
-### **4. 가족 공유 시스템**
-- **진행도 공유**: 환자의 게임 성과를 가족과 실시간 공유
-- **알림 시스템**: 게임 리마인더 및 성과 업데이트 알림
-- **가족 그룹 관리**: 다중 환자 지원 및 권한 관리
-
----
-
-## 🔒 **보안 및 개인정보 보호**
-
-### **보안 조치**
-- **암호화**: AES-256 (저장), TLS 1.3 (전송)
-- **인증**: JWT + OAuth2 (Naver 연동)
-- **권한 관리**: RBAC 기반 세분화된 접근 제어
-- **감사 로그**: 모든 민감한 작업 로깅
-
-### **개인정보 보호**
-- **데이터 최소화**: 필요한 정보만 수집
-- **목적 제한**: 명시된 목적에만 사용
-- **보존 기간**: 법적 요구사항 준수
-- **삭제 권리**: 사용자 요청 시 완전 삭제
-
----
-
-## 📊 **성과 지표 (KPI)**
-
-### **사용자 참여 지표**
-- **일일 활성 사용자 (DAU)**: 목표 70%
-- **게임 완료율**: 목표 85%
-- **평균 세션 시간**: 목표 15분
-- **주간 재방문율**: 목표 80%
-
-### **인지 성과 지표**
-- **정답률 개선**: 월 평균 5% 향상
-- **반응시간 단축**: 월 평균 10% 개선
-- **일관성 지수**: 변동 계수 20% 이하
-
----
-
-## 🧪 **테스트**
-
-### **테스트 실행**
-```bash
-# 백엔드 테스트
-cd backend/SpringBoot
-./gradlew test
-
-# 프론트엔드 테스트
-cd frontend
-npm test
-
-# AI 서비스 테스트
-cd ai
-python -m pytest
-```
-
-### **테스트 커버리지**
-- **백엔드**: 80% 이상
-- **프론트엔드**: 70% 이상
-- **AI 서비스**: 75% 이상
-
----
-
-## 🚀 **배포**
-
-### **개발 환경**
-```bash
-docker-compose -f docker-compose.dev.yml up -d
-```
-
-### **운영 환경**
-```bash
-docker-compose -f docker-compose.prod.yml up -d
-```
-
-### **배포 환경**
-- **개발**: AWS EC2 (t3.medium)
-- **스테이징**: AWS EC2 (t3.large)
-- **운영**: AWS ECS + RDS + S3
-
----
 
 ## 🤝 **기여하기**
 
@@ -224,45 +269,30 @@ docker-compose -f docker-compose.prod.yml up -d
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-### **코딩 컨벤션**
-- [📝 코딩 컨벤션 가이드](docs/14_코딩_컨벤션.md) 참조
-- ESLint, Prettier, Checkstyle 규칙 준수
-- 테스트 코드 작성 필수
-
----
 
 ## 📞 **연락처 및 지원**
 
 ### **팀 구성**
-- **프로젝트 매니저**: 전체 프로젝트 관리
-- **백엔드 개발자** (2명): Spring Boot, AI 모델 통합
-- **프론트엔드 개발자** (2명): React, UI/UX 구현
-- **AI 엔지니어** (1명): 모델 개발 및 최적화
-- **QA 엔지니어** (1명): 품질 관리
-- **DevOps 엔지니어** (1명): 인프라 관리
+- **이은비**
+- **박은채**
+- **김건호**
+- **김이슬**
+
 
 ### **연락처**
-- **이메일**: contact@memoryforest.com
-- **GitHub**: [https://github.com/your-username/memory-forest](https://github.com/your-username/memory-forest)
-- **문서**: [https://docs.memoryforest.com](https://docs.memoryforest.com)
-
----
-
-## 📄 **라이선스**
-
-이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
+- **이메일**: leb6336@gmail.com
+- **GitHub**: [https://github.com/Potatoeunbi/memory-forest](https://github.com/Potatoeunbi/memory-forest)
 
 ---
 
 ## 🙏 **감사의 말**
 
-- **의료진**: 신경과 전문의, 작업치료사
-- **UX 전문가**: 고령자 인터페이스 전문가
-- **보안 전문가**: 개인정보보호 컨설턴트
-- **오픈소스 커뮤니티**: 다양한 라이브러리 및 도구 제공
+2025년 성과공유회 컨퍼런스 프로젝트로 개발된 기억숲은 치매 예방을 통한 사회적 가치 창출을 목표로 합니다.
+WHO 권고안에 따른 인지능감소 및 치매의 위험도를 낮추기 위한 연구결과에 따르면, 인지활동의 증가가 인지보존을 저극하거나 증가시킬 수 있으며, 인지활동의 낮은 수준에 비해 높은 수준인 사람에게 경도인지장애나 알츠하이머 치매진단의 위험성이 현저하게 감소한다고 보고되었습니다.
+저희 기억숲은 가족과 함께하는 AI 기반 치매 예방 및 관리 플랫폼을 개발하여, 인지저하 예방 및 개선 대상자 & 보호자의 행복한 삶을 보호하는 것을 목표로 합니다.
 
 ---
 
 **© 2025 Memory Forest. All rights reserved.**
 
-> **"AI 기술로 치매 환자와 가족의 삶을 더 나은 방향으로 변화시키겠습니다."**
+> **"🌳 함께 만들어가는 소중한 기억들, 기억숲과 함께하세요 🌳"**
